@@ -1,49 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juanse & Bernarda — 9.1.27</title>
   <style>
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Regular-Trial.otf') format('opentype'); font-weight: 400; font-style: normal; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Regular-Italic-Trial.otf') format('opentype'); font-weight: 400; font-style: italic; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Medium-Trial.otf') format('opentype'); font-weight: 500; font-style: normal; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Medium-Italic-Trial.otf') format('opentype'); font-weight: 500; font-style: italic; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Bold-Trial.otf') format('opentype'); font-weight: 700; font-style: normal; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Bold-Italic-Trial.otf') format('opentype'); font-weight: 700; font-style: italic; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Heavy-Trial.otf') format('opentype'); font-weight: 800; font-style: normal; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Black-Trial.otf') format('opentype'); font-weight: 900; font-style: normal; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Black-Italic-Trial.otf') format('opentype'); font-weight: 900; font-style: italic; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Extra-Trial.otf') format('opentype'); font-weight: 950; font-style: normal; }
-    @font-face { font-family: 'GT Flaire Extra'; src: url('GT-Flaire-Extra-Extra-Italic-Trial.otf') format('opentype'); font-weight: 950; font-style: italic; }
-    @font-face { font-family: 'PP Neue Montreal'; src: url('PPNeueMontreal-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; }
-    @font-face { font-family: 'PP Neue Montreal'; src: url('PPNeueMontreal-Book.otf') format('opentype'); font-weight: 400; font-style: normal; }
-    @font-face { font-family: 'PP Neue Montreal'; src: url('PPNeueMontreal-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; }
-    @font-face { font-family: 'PP Neue Montreal'; src: url('PPNeueMontreal-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
-    @font-face { font-family: 'PP Neue Montreal'; src: url('PPNeueMontreal-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
-    @font-face { font-family: 'PP Neue Montreal'; src: url('PPNeueMontreal-SemiBolditalic.otf') format('opentype'); font-weight: 600; font-style: italic; }
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Regular-Trial.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Regular-Italic-Trial.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Medium-Trial.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Medium-Italic-Trial.otf') format('opentype');
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Bold-Trial.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Bold-Italic-Trial.otf') format('opentype');
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Heavy-Trial.otf') format('opentype');
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Black-Trial.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Black-Italic-Trial.otf') format('opentype');
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Extra-Trial.otf') format('opentype');
+      font-weight: 950;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GT Flaire Extra';
+      src: url('GT-Flaire-Extra-Extra-Italic-Trial.otf') format('opentype');
+      font-weight: 950;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PPNeueMontreal-Thin.otf') format('opentype');
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PPNeueMontreal-Book.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PPNeueMontreal-Italic.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PPNeueMontreal-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PPNeueMontreal-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('PPNeueMontreal-SemiBolditalic.otf') format('opentype');
+      font-weight: 600;
+      font-style: italic;
+    }
   </style>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --burgundy:      #590931;
-      --burgundy-dark: #3D0620;
-      --cream:         #FFF3EA;
-      --blush:         #FFF3EA;
-      --forest:        #213F3D;
-      --forest-light:  #819563;
-      --pink-bg:       #FDB5E2;
-      --sand:          #C8B898;
-      --champagne:     #F0DFC0;
-      --beige:         #E8D5B8;
-      --lino:          #C8B898;
-      --text-dark:     #1A0A12;
-      --text-mid:      #590931;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --burgundy: #590931;
+      --burgundy-dark: #3D0620;
+      --cream: #FFF3EA;
+      --blush: #FFF3EA;
+      --forest: #213F3D;
+      --forest-light: #819563;
+      --pink-bg: #FDB5E2;
+      --sand: #C8B898;
+      --champagne: #F0DFC0;
+      --beige: #E8D5B8;
+      --lino: #C8B898;
+      --text-dark: #1A0A12;
+      --text-mid: #590931;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'PP Neue Montreal', sans-serif;
@@ -53,17 +163,43 @@
     }
 
     /* ── TYPOGRAPHY GLOBAL ───────────────────────────── */
-    .hero-date, .section-title, .story-title, .inv-couple, .inv-date,
-    .venue-tagline, .schedule-time, .quito-title, .countdown-number,
-    .closing-couple, .closing-date, .rsvp-title, .rsvp-success-title,
-    .gifts-name, .lodging-watermark, .nav-logo, .mobile-menu a {
+    .hero-date,
+    .section-title,
+    .story-title,
+    .inv-couple,
+    .inv-date,
+    .venue-tagline,
+    .schedule-time,
+    .quito-title,
+    .countdown-number,
+    .closing-couple,
+    .closing-date,
+    .rsvp-title,
+    .rsvp-success-title,
+    .gifts-name,
+    .lodging-watermark,
+    .nav-logo,
+    .mobile-menu a {
       letter-spacing: -0.02em;
       line-height: 0.96;
     }
 
-    body, p, li, input, select, textarea, .story-subtitle, .inv-body,
-    .dresscode-note, .gifts-body, .lodging-body, .venue-address,
-    .rsvp-deadline, .rsvp-success-text, .venue-tagline, .gifts-detail {
+    body,
+    p,
+    li,
+    input,
+    select,
+    textarea,
+    .story-subtitle,
+    .inv-body,
+    .dresscode-note,
+    .gifts-body,
+    .lodging-body,
+    .venue-address,
+    .rsvp-deadline,
+    .rsvp-success-text,
+    .venue-tagline,
+    .gifts-detail {
       letter-spacing: 0;
       line-height: 1.3;
     }
@@ -71,22 +207,32 @@
     /* ── NAV ─────────────────────────────────────────── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       padding: 1.25rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .nav-logo {
       text-decoration: none;
       display: flex;
       align-items: center;
     }
-    .nav-logo img { height: 32px; width: auto; display: block; }
+
+    .nav-logo img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
     .nav-links {
       display: none;
     }
+
     .lang-toggle {
       font-size: 0.85rem;
       letter-spacing: 0.18em;
@@ -100,8 +246,16 @@
       padding: 6px 14px;
       line-height: 1;
     }
-    .lang-active { opacity: 0.9; font-weight: 600; }
-    .lang-inactive { opacity: 0.35; }
+
+    .lang-active {
+      opacity: 0.9;
+      font-weight: 600;
+    }
+
+    .lang-inactive {
+      opacity: 0.35;
+    }
+
     .nav-hamburger {
       display: flex;
       flex-direction: column;
@@ -111,6 +265,7 @@
       border: none;
       padding: 4px;
     }
+
     .nav-hamburger span {
       display: block;
       width: 24px;
@@ -118,9 +273,20 @@
       background: var(--burgundy);
       transition: transform 0.3s, opacity 0.3s;
     }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
     .mobile-menu {
       display: none;
       position: fixed;
@@ -132,7 +298,11 @@
       justify-content: center;
       gap: 3rem;
     }
-    .mobile-menu.open { display: flex; }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
     .mobile-menu a {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(2.5rem, 7vw, 4rem);
@@ -140,11 +310,15 @@
       text-decoration: none;
       transition: font-weight 0.15s, font-style 0.15s;
     }
+
     .mobile-menu a:hover {
       font-weight: 700;
       font-style: italic;
     }
-    .nav-hamburger.open span { background: var(--cream); }
+
+    .nav-hamburger.open span {
+      background: var(--cream);
+    }
 
     /* ── HERO ────────────────────────────────────────── */
     #hero {
@@ -158,13 +332,20 @@
       justify-content: flex-end;
       overflow: hidden;
     }
+
     .hero-monogram {
       position: absolute;
       top: 3.5rem;
       left: 50%;
       transform: translateX(-50%);
     }
-    .hero-monogram img { height: 43px; width: auto; display: block; }
+
+    .hero-monogram img {
+      height: 43px;
+      width: auto;
+      display: block;
+    }
+
     .hero-label {
       position: absolute;
       top: 7.75rem;
@@ -177,6 +358,7 @@
       font-weight: 500;
       white-space: nowrap;
     }
+
     .hero-names-row {
       position: absolute;
       bottom: 8%;
@@ -185,6 +367,7 @@
       justify-content: space-between;
       padding: 0 5%;
     }
+
     .hero-name-tag {
       font-size: 0.7rem;
       letter-spacing: 0.2em;
@@ -207,12 +390,14 @@
       opacity: 0.6;
       animation: bounce 2s infinite;
     }
+
     .scroll-indicator span {
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--cream);
     }
+
     .scroll-arrow {
       width: 20px;
       height: 20px;
@@ -220,9 +405,17 @@
       border-bottom: 2px solid var(--cream);
       transform: rotate(45deg);
     }
+
     @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(8px);
+      }
     }
 
     /* ── COUNTDOWN (inside RSVP) ─────────────────────── */
@@ -230,6 +423,7 @@
       padding: 0 0 3.5rem;
       text-align: center;
     }
+
     .countdown-grid {
       display: flex;
       justify-content: center;
@@ -238,12 +432,14 @@
       flex-wrap: nowrap;
       white-space: nowrap;
     }
+
     .countdown-unit {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.25rem;
     }
+
     .countdown-number {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(1.4rem, 3.5vw, 2.8rem);
@@ -252,23 +448,27 @@
       line-height: 1;
       min-width: 2ch;
     }
+
     .countdown-unit-label {
       font-size: clamp(0.45rem, 0.8vw, 0.55rem);
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255,243,234,0.45);
+      color: rgba(255, 243, 234, 0.45);
     }
+
     .countdown-sep {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(1.2rem, 2.5vw, 2rem);
-      color: rgba(255,243,234,0.2);
+      color: rgba(255, 243, 234, 0.2);
       line-height: 1;
       align-self: flex-start;
       padding-top: 0.1rem;
     }
 
     /* ── SECTION DEFAULTS ────────────────────────────── */
-    section { padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 6vw, 6rem); }
+    section {
+      padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 6vw, 6rem);
+    }
 
     .section-eyebrow {
       font-size: 0.7rem;
@@ -279,6 +479,7 @@
       margin-bottom: 1rem;
       display: block;
     }
+
     .section-title {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(2.5rem, 7vw, 5.5rem);
@@ -292,16 +493,26 @@
       background: var(--blush);
       text-align: center;
     }
+
     .story-flora {
       margin-bottom: 2.5rem;
     }
-    .story-flora img { height: 48px; width: auto; display: block; margin: 0 auto; opacity: 0.5; }
+
+    .story-flora img {
+      height: 48px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      opacity: 0.5;
+    }
+
     .story-subtitle {
       font-size: clamp(0.95rem, 2.5vw, 1.2rem);
       color: var(--text-mid);
       margin-bottom: 2.5rem;
       line-height: 1.6;
     }
+
     .story-title {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(2.8rem, 9vw, 7rem);
@@ -310,16 +521,19 @@
       line-height: 0.96;
       margin-bottom: 5rem;
     }
+
     .story-photo-wrap {
       position: relative;
       display: inline-block;
       max-width: min(340px, 80vw);
     }
+
     .story-photo-wrap img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     .story-rotated-left {
       position: absolute;
       right: 100%;
@@ -335,6 +549,7 @@
       opacity: 0.6;
       white-space: nowrap;
     }
+
     .story-rotated-right {
       position: absolute;
       left: 100%;
@@ -361,6 +576,7 @@
       padding-top: clamp(2rem, 5vw, 4rem);
       padding-bottom: clamp(4rem, 8vw, 7rem);
     }
+
     .inv-body {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: var(--text-mid);
@@ -369,6 +585,7 @@
       max-width: 40ch;
       text-align: center;
     }
+
     .inv-date {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(1.5rem, 4.2vw, 3rem);
@@ -380,24 +597,33 @@
       white-space: nowrap;
       margin-bottom: 2rem;
     }
+
     .inv-rsvp-bar {
       margin-top: calc(clamp(5rem, 10vw, 7rem) + 1.25rem);
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    .inv-mountain img { height: 48px; width: auto; display: block; opacity: 0.45; }
+
+    .inv-mountain img {
+      height: 48px;
+      width: auto;
+      display: block;
+      opacity: 0.45;
+    }
 
     /* ── QUITO FULL WIDTH ────────────────────────────── */
     #quito-section {
       position: relative;
       overflow: visible;
     }
+
     .quito-img-wrap {
       position: relative;
       width: 100%;
       overflow: hidden;
     }
+
     .quito-img-wrap img {
       width: 100%;
       height: clamp(75vh, 85vh, 95vh);
@@ -405,27 +631,33 @@
       object-position: center top;
       display: block;
     }
+
     .quito-text-top {
       position: absolute;
       top: clamp(2rem, 5vw, 4rem);
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       text-align: center;
     }
+
     .quito-where {
       font-size: clamp(0.8rem, 1.5vw, 1rem);
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       letter-spacing: 0.05em;
       margin-bottom: 0.3rem;
     }
+
     .quito-where-sub {
       font-size: clamp(0.95rem, 1.8vw, 1.15rem);
       color: #fff;
       font-weight: 700;
       letter-spacing: 0;
     }
+
     .quito-title {
       position: absolute;
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       top: 38%;
       transform: translateY(-50%);
       font-family: 'GT Flaire Extra', serif;
@@ -451,6 +683,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     .venue-card {
       background: var(--forest);
       align-self: stretch;
@@ -460,8 +693,18 @@
       padding: clamp(3rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3rem);
       color: #819563;
     }
-    .venue-icon { margin-bottom: 2rem; }
-    .venue-icon img { height: 72px; width: auto; display: block; margin: 0 auto; }
+
+    .venue-icon {
+      margin-bottom: 2rem;
+    }
+
+    .venue-icon img {
+      height: 72px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
     .venue-tagline {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(1.1rem, 2.5vw, 1.6rem);
@@ -470,6 +713,7 @@
       font-weight: 400;
       line-height: 1.4;
     }
+
     .schedule-stack {
       display: flex;
       flex-direction: column;
@@ -477,12 +721,14 @@
       gap: 1.75rem;
       margin-bottom: 3rem;
     }
+
     .schedule-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.4rem;
     }
+
     .schedule-time {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -491,6 +737,7 @@
       letter-spacing: -0.02em;
       line-height: 0.96;
     }
+
     .schedule-label {
       font-size: 0.8rem;
       letter-spacing: 0.15em;
@@ -498,18 +745,21 @@
       color: #819563;
       opacity: 0.7;
     }
+
     .timeline-divider {
       height: 28px;
       width: auto;
       opacity: 0.55;
     }
+
     .venue-divider {
       width: 70%;
       max-width: 400px;
       height: 1px;
-      background: rgba(129,149,99,0.25);
+      background: rgba(129, 149, 99, 0.25);
       margin: 0 auto 2.5rem;
     }
+
     .venue-address {
       font-size: clamp(0.9rem, 2vw, 1rem);
       line-height: 1.8;
@@ -517,10 +767,11 @@
       max-width: 340px;
       margin: 0 auto 2.5rem;
     }
+
     .venue-map-btn {
       display: inline-block;
       padding: 0.7rem 1.75rem;
-      border: 1px solid rgba(129,149,99,0.45);
+      border: 1px solid rgba(129, 149, 99, 0.45);
       color: #819563;
       text-decoration: none;
       font-size: 0.7rem;
@@ -529,18 +780,44 @@
       border-radius: 2px;
       transition: all 0.3s;
     }
-    .venue-map-btn:hover { background: rgba(129,149,99,0.1); border-color: #819563; }
-    @media (max-width: 1024px) { .venue-card { margin-left: 10%; margin-right: 10%; } .rsvp-card { width: 80%; } }
-    @media (max-width: 768px) { .venue-card { margin-left: 5%; margin-right: 5%; } .rsvp-card { width: 90%; } }
+
+    .venue-map-btn:hover {
+      background: rgba(129, 149, 99, 0.1);
+      border-color: #819563;
+    }
+
+    @media (max-width: 1024px) {
+      .venue-card {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      .rsvp-card {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .venue-card {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      .rsvp-card {
+        width: 90%;
+      }
+    }
 
     /* ── DRESS CODE ──────────────────────────────────── */
     #dresscode {
       background: var(--blush);
     }
+
     .dresscode-inner {
       max-width: 900px;
       margin: 0 auto;
     }
+
     .dresscode-header {
       margin-bottom: 0;
       text-align: center;
@@ -549,20 +826,32 @@
       align-items: center;
       gap: 0.75rem;
     }
-    .dresscode-flora { margin-bottom: clamp(3rem, 6vw, 5rem); }
-    .dresscode-flora img { height: 48px; width: auto; display: block; opacity: 0.5; }
+
+    .dresscode-flora {
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .dresscode-flora img {
+      height: 48px;
+      width: auto;
+      display: block;
+      opacity: 0.5;
+    }
+
     .dresscode-label {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: var(--text-mid);
       line-height: 1.8;
       text-align: center;
     }
+
     .dresscode-colors {
       display: flex;
       gap: clamp(3rem, 6vw, 5rem);
       justify-content: center;
       margin: clamp(4rem, 8vw, 6rem) 0;
     }
+
     .dresscode-color-name {
       font-size: 0.65rem;
       letter-spacing: 0.25em;
@@ -571,36 +860,47 @@
       opacity: 0.6;
       font-weight: 500;
     }
+
     .dresscode-body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: stretch;
     }
+
     .dresscode-img {
       width: 82%;
       height: auto;
       display: block;
       border-radius: 2px;
     }
+
     .dresscode-text {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+
     .dresscode-note {
       font-size: clamp(1rem, 2.5vw, 1.15rem);
       color: var(--text-mid);
       line-height: 1.75;
       max-width: 28ch;
     }
+
     .attire-block {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
     }
-    .attire-icon-large { height: 56px; width: auto; display: block; }
+
+    .attire-icon-large {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
+
     .attire-text {
       font-size: clamp(0.95rem, 2vw, 1.05rem);
       color: var(--burgundy);
@@ -613,32 +913,46 @@
       background: var(--cream);
       text-align: center;
     }
+
     .gifts-inner {
       max-width: 680px;
       margin: 0 auto;
       text-align: center;
     }
-    .gifts-icon { margin-bottom: 1rem; }
-    .gifts-icon img { height: 52px; width: auto; display: block; margin: 0 auto; opacity: 0.45; }
+
+    .gifts-icon {
+      margin-bottom: 1rem;
+    }
+
+    .gifts-icon img {
+      height: 52px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      opacity: 0.45;
+    }
+
     .gifts-body {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: var(--text-mid);
       line-height: 1.8;
       margin: 1.5rem auto 2.5rem;
     }
+
     .gifts-tabs {
       display: flex;
       justify-content: center;
-      border: 1px solid rgba(89,9,49,0.18);
+      border: 1px solid rgba(89, 9, 49, 0.18);
       border-radius: 4px 4px 0 0;
       overflow: hidden;
     }
+
     .gifts-tab {
       flex: 1;
       padding: 0.85rem 1rem;
       background: none;
       border: none;
-      border-right: 1px solid rgba(89,9,49,0.18);
+      border-right: 1px solid rgba(89, 9, 49, 0.18);
       color: var(--burgundy);
       font-family: 'PP Neue Montreal', sans-serif;
       font-size: 0.7rem;
@@ -648,16 +962,30 @@
       transition: background 0.2s;
       opacity: 0.55;
     }
-    .gifts-tab:last-child { border-right: none; }
-    .gifts-tab.active { background: var(--burgundy); color: var(--cream); opacity: 1; }
-    .gifts-tab:not(.active):hover { background: rgba(89,9,49,0.05); opacity: 1; }
+
+    .gifts-tab:last-child {
+      border-right: none;
+    }
+
+    .gifts-tab.active {
+      background: var(--burgundy);
+      color: var(--cream);
+      opacity: 1;
+    }
+
+    .gifts-tab:not(.active):hover {
+      background: rgba(89, 9, 49, 0.05);
+      opacity: 1;
+    }
+
     .gifts-panels-container {
       display: grid;
     }
+
     .gifts-panel {
       grid-area: 1 / 1;
       background: var(--blush);
-      border: 1px solid rgba(89,9,49,0.18);
+      border: 1px solid rgba(89, 9, 49, 0.18);
       border-top: none;
       border-radius: 0 0 4px 4px;
       padding: 2.5rem 2rem;
@@ -669,7 +997,12 @@
       visibility: hidden;
       pointer-events: none;
     }
-    .gifts-panel.active { visibility: visible; pointer-events: auto; }
+
+    .gifts-panel.active {
+      visibility: visible;
+      pointer-events: auto;
+    }
+
     .gifts-panel-label {
       font-size: 0.65rem;
       letter-spacing: 0.25em;
@@ -679,11 +1012,13 @@
       display: block;
       margin-bottom: 1.25rem;
     }
+
     .gifts-panel p {
       font-size: clamp(0.9rem, 2vw, 1rem);
       color: var(--text-mid);
       line-height: 2;
     }
+
     .gifts-copy-btn {
       display: inline-flex;
       align-items: center;
@@ -691,7 +1026,7 @@
       margin-top: 1.5rem;
       padding: 0.6rem 1.25rem;
       background: none;
-      border: 1px solid rgba(107,21,53,0.25);
+      border: 1px solid rgba(107, 21, 53, 0.25);
       border-radius: 2px;
       color: var(--burgundy);
       font-size: 0.7rem;
@@ -701,8 +1036,15 @@
       font-family: 'PP Neue Montreal', sans-serif;
       transition: all 0.2s;
     }
-    .gifts-copy-btn:hover { background: rgba(107,21,53,0.06); }
-    .gifts-copy-btn.copied { color: var(--forest); border-color: var(--forest); }
+
+    .gifts-copy-btn:hover {
+      background: rgba(107, 21, 53, 0.06);
+    }
+
+    .gifts-copy-btn.copied {
+      color: var(--forest);
+      border-color: var(--forest);
+    }
 
     /* ── LODGING ─────────────────────────────────────── */
     #lodging {
@@ -710,6 +1052,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .lodging-watermark {
       position: absolute;
       top: 50%;
@@ -721,11 +1064,13 @@
       pointer-events: none;
       user-select: none;
     }
+
     .lodging-inner {
       position: relative;
       max-width: 800px;
       margin: 0 auto;
     }
+
     .lodging-body {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: var(--text-mid);
@@ -733,26 +1078,30 @@
       margin: 1.5rem 0 3rem;
       max-width: 500px;
     }
+
     .lodging-options {
       display: flex;
       align-items: center;
       gap: 0;
       flex-wrap: wrap;
     }
+
     .lodging-options::before,
     .lodging-options::after {
       content: '';
       flex: 1;
       height: 1px;
-      background: rgba(107,21,53,0.15);
+      background: rgba(107, 21, 53, 0.15);
       min-width: 20px;
     }
+
     .hotels {
       display: flex;
       gap: clamp(1.5rem, 4vw, 3rem);
       padding: 0 1.5rem;
       flex-wrap: wrap;
     }
+
     .hotel-name {
       font-size: 0.65rem;
       letter-spacing: 0.2em;
@@ -768,14 +1117,16 @@
       color: var(--cream);
       text-align: center;
     }
+
     .rsvp-eyebrow {
       font-size: 0.7rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: rgba(250,240,232,0.5);
+      color: rgba(250, 240, 232, 0.5);
       margin-bottom: 1rem;
       display: block;
     }
+
     .rsvp-title {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(2.5rem, 7vw, 5rem);
@@ -783,12 +1134,14 @@
       color: var(--cream);
       margin-bottom: 0.75rem;
     }
+
     .rsvp-deadline {
       font-size: 0.85rem;
-      color: rgba(250,240,232,0.55);
+      color: rgba(250, 240, 232, 0.55);
       margin-bottom: 3rem;
       letter-spacing: 0.05em;
     }
+
     .rsvp-form {
       max-width: 560px;
       margin: 0 auto;
@@ -797,23 +1150,31 @@
       gap: 1.25rem;
       text-align: left;
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
     }
+
     .form-group label {
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(250,240,232,0.5);
+      color: rgba(250, 240, 232, 0.5);
     }
+
     .form-group input,
     .form-group select,
     .form-group textarea {
-      background: rgba(250,240,232,0.08);
-      border: 1px solid rgba(250,240,232,0.2);
+      background: rgba(250, 240, 232, 0.08);
+      border: 1px solid rgba(250, 240, 232, 0.2);
       border-radius: 2px;
       padding: 0.85rem 1rem;
       color: var(--cream);
@@ -823,45 +1184,74 @@
       transition: border-color 0.2s;
       width: 100%;
     }
+
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(250,240,232,0.3); }
+    .form-group textarea::placeholder {
+      color: rgba(250, 240, 232, 0.3);
+    }
+
     .form-group input:focus,
     .form-group select:focus,
-    .form-group textarea:focus { border-color: rgba(250,240,232,0.5); }
-    .form-group select option { background: var(--burgundy-dark); color: var(--cream); }
-    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group textarea:focus {
+      border-color: rgba(250, 240, 232, 0.5);
+    }
+
+    .form-group select option {
+      background: var(--burgundy-dark);
+      color: var(--cream);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
     .rsvp-radio-group {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .rsvp-radio {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
     }
-    .rsvp-radio input { display: none; }
+
+    .rsvp-radio input {
+      display: none;
+    }
+
     .radio-custom {
-      width: 18px; height: 18px;
-      border: 2px solid rgba(250,240,232,0.35);
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(250, 240, 232, 0.35);
       border-radius: 50%;
       transition: all 0.2s;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .rsvp-radio input:checked + .radio-custom {
+
+    .rsvp-radio input:checked+.radio-custom {
       border-color: var(--cream);
       background: var(--cream);
     }
-    .rsvp-radio input:checked + .radio-custom::after {
+
+    .rsvp-radio input:checked+.radio-custom::after {
       content: '';
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--burgundy);
     }
-    .radio-label { font-size: 0.9rem; color: rgba(250,240,232,0.8); }
+
+    .radio-label {
+      font-size: 0.9rem;
+      color: rgba(250, 240, 232, 0.8);
+    }
+
     .rsvp-submit {
       background: var(--cream);
       color: var(--burgundy);
@@ -878,20 +1268,33 @@
       align-self: center;
       margin-top: 0.5rem;
     }
-    .rsvp-submit:hover { background: var(--champagne); transform: translateY(-1px); }
+
+    .rsvp-submit:hover {
+      background: var(--champagne);
+      transform: translateY(-1px);
+    }
+
     .rsvp-success {
       display: none;
       text-align: center;
       padding: 2rem;
     }
-    .rsvp-success.show { display: block; }
+
+    .rsvp-success.show {
+      display: block;
+    }
+
     .rsvp-success-title {
       font-family: 'GT Flaire Extra', serif;
       font-size: 2rem;
       color: var(--cream);
       margin-bottom: 0.75rem;
     }
-    .rsvp-success-text { color: rgba(250,240,232,0.7); line-height: 1.7; }
+
+    .rsvp-success-text {
+      color: rgba(250, 240, 232, 0.7);
+      line-height: 1.7;
+    }
 
     /* ── CLOSING ─────────────────────────────────────── */
     #closing {
@@ -907,6 +1310,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     .rsvp-card {
       background: var(--burgundy-dark);
       width: 70%;
@@ -914,23 +1318,27 @@
       padding: clamp(3rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3rem);
       margin-bottom: clamp(3rem, 6vw, 5rem);
     }
+
     .closing-names-svg {
       height: clamp(3rem, 9vw, 6.5rem);
       width: auto;
       display: block;
       margin: 0 auto 2.5rem;
     }
+
     .closing-photo-wrap {
       position: relative;
       display: inline-block;
       max-width: min(270px, 62vw);
       margin-bottom: clamp(5rem, 8vw, 7rem);
     }
+
     .closing-photo-wrap img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     .closing-rotated-left {
       position: absolute;
       right: 100%;
@@ -946,6 +1354,7 @@
       opacity: 0.65;
       white-space: nowrap;
     }
+
     .closing-rotated-right {
       position: absolute;
       left: 100%;
@@ -961,6 +1370,7 @@
       opacity: 0.65;
       white-space: nowrap;
     }
+
     .closing-tagline-row {
       display: flex;
       justify-content: space-between;
@@ -968,6 +1378,7 @@
       width: 100%;
       margin-bottom: 0.4rem;
     }
+
     .closing-tag {
       font-size: 0.65rem;
       letter-spacing: 0.25em;
@@ -975,9 +1386,11 @@
       color: var(--burgundy-dark);
       opacity: 0.8;
     }
+
     .closing-rsvp {
       margin-bottom: 0;
     }
+
     .closing-rsvp .section-eyebrow {
       color: var(--cream);
       opacity: 0.6;
@@ -985,15 +1398,29 @@
       text-align: center;
       margin-bottom: 0.5rem;
     }
+
     .closing-rsvp .section-title {
       color: var(--cream);
       text-align: center;
       margin-bottom: 3.5rem;
     }
-    .closing-rsvp .countdown-number { color: var(--cream); }
-    .closing-rsvp .countdown-unit-label { color: rgba(255,243,234,0.5); }
-    .closing-rsvp .countdown-sep { color: rgba(255,243,234,0.25); }
-    .closing-rsvp #countdown { padding-bottom: 2rem; }
+
+    .closing-rsvp .countdown-number {
+      color: var(--cream);
+    }
+
+    .closing-rsvp .countdown-unit-label {
+      color: rgba(255, 243, 234, 0.5);
+    }
+
+    .closing-rsvp .countdown-sep {
+      color: rgba(255, 243, 234, 0.25);
+    }
+
+    .closing-rsvp #countdown {
+      padding-bottom: 2rem;
+    }
+
     .closing-rsvp-deadline {
       font-size: clamp(0.95rem, 2.5vw, 1.2rem);
       color: var(--cream);
@@ -1002,6 +1429,7 @@
       line-height: 1.3;
       margin-bottom: 3.5rem;
     }
+
     .typeform-wrap {
       width: 100%;
       max-width: 560px;
@@ -1009,6 +1437,7 @@
       border-radius: 4px;
       overflow: hidden;
     }
+
     .typeform-wrap iframe {
       width: 100%;
       height: 500px;
@@ -1016,12 +1445,14 @@
       border-radius: 4px;
       display: block;
     }
+
     .closing-divider {
       border: none;
-      border-top: 1px solid rgba(61,6,32,0.12);
+      border-top: 1px solid rgba(61, 6, 32, 0.12);
       margin: 0 auto clamp(3rem, 6vw, 5rem);
       width: 60%;
     }
+
     .closing-date {
       font-family: 'GT Flaire Extra', serif;
       font-size: clamp(7rem, 30vw, 24rem);
@@ -1039,10 +1470,11 @@
       text-align: center;
       padding: 2rem;
     }
+
     .footer-text {
       font-size: 0.7rem;
       letter-spacing: 0.15em;
-      color: rgba(250,240,232,0.4);
+      color: rgba(250, 240, 232, 0.4);
     }
 
     /* ── ANIMATIONS ──────────────────────────────────── */
@@ -1051,6 +1483,7 @@
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     .fade-up.visible {
       opacity: 1;
       transform: translateY(0);
@@ -1058,7 +1491,9 @@
 
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
+      nav {
+        padding: 1rem 1.5rem;
+      }
 
       .dresscode-body {
         grid-template-columns: 1fr;
@@ -1066,476 +1501,509 @@
         justify-items: center;
         text-align: center;
       }
+
       .dresscode-img {
         margin: 3.125rem auto 0;
         width: 70%;
       }
+
       .dresscode-text {
         align-items: center;
       }
+
       .attire-block {
         flex-direction: column;
         align-items: center;
         margin-top: 3.125rem;
       }
+
       .attire-icon-large {
         display: block;
         margin: 0 auto;
       }
+
       .dresscode-note {
         text-align: center;
         max-width: none;
       }
 
-      .form-row { grid-template-columns: 1fr; }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
 
-      .hero-photo-overlay { width: 70%; }
-      .story-photo-wrap { max-width: min(220px, 60vw); }
+      .hero-photo-overlay {
+        width: 70%;
+      }
 
-      .schedule-divider { display: none; }
-      .schedule-grid { gap: 1rem; }
+      .story-photo-wrap {
+        max-width: min(220px, 60vw);
+      }
+
+      .schedule-divider {
+        display: none;
+      }
+
+      .schedule-grid {
+        gap: 1rem;
+      }
 
       .story-rotated-left,
       .story-rotated-right,
       .closing-rotated-left,
-      .closing-rotated-right { display: none; }
+      .closing-rotated-right {
+        display: none;
+      }
 
-      .closing-names-svg { height: clamp(4rem, 14vw, 6rem); }
-      .closing-photo-wrap { max-width: min(200px, 50vw); }
+      .closing-names-svg {
+        height: clamp(4rem, 14vw, 6rem);
+      }
+
+      .closing-photo-wrap {
+        max-width: min(200px, 50vw);
+      }
     }
 
     @media (max-width: 480px) {
-      .countdown-grid { gap: 1.5rem; }
-      .countdown-sep { display: none; }
-      .color-chips { gap: 1.5rem; }
-      .hotels { gap: 1.5rem; justify-content: center; }
+      .countdown-grid {
+        gap: 1.5rem;
+      }
+
+      .countdown-sep {
+        display: none;
+      }
+
+      .color-chips {
+        gap: 1.5rem;
+      }
+
+      .hotels {
+        gap: 1.5rem;
+        justify-content: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="mainNav">
-  <button class="lang-toggle" id="langToggle" onclick="toggleLang()"><span class="lang-active">ES</span> · <span class="lang-inactive">EN</span></button>
-  <ul class="nav-links">
-    <li><a href="#story" data-i18n="nav.story">Nuestra Historia</a></li>
-    <li><a href="#venue" data-i18n="nav.venue">El Lugar</a></li>
-    <li><a href="#dresscode" data-i18n="nav.dress">Vestimenta</a></li>
-    <li><a href="#gifts" data-i18n="nav.gifts">Regalos</a></li>
-    <li><a href="#closing" data-i18n="nav.rsvp">RSVP</a></li>
-  </ul>
-  <button class="nav-hamburger" id="menuToggle" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <!-- NAV -->
+  <nav id="mainNav">
+    <button class="lang-toggle" id="langToggle" onclick="toggleLang()"><span class="lang-active">ES</span> · <span
+        class="lang-inactive">EN</span></button>
+    <ul class="nav-links">
+      <li><a href="#story" data-i18n="nav.story">Nuestra Historia</a></li>
+      <li><a href="#venue" data-i18n="nav.venue">El Lugar</a></li>
+      <li><a href="#dresscode" data-i18n="nav.dress">Vestimenta</a></li>
+      <li><a href="#gifts" data-i18n="nav.gifts">Regalos</a></li>
+      <li><a href="#closing" data-i18n="nav.rsvp">RSVP</a></li>
+    </ul>
+    <button class="nav-hamburger" id="menuToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#story" class="mobile-link" data-i18n="nav.story">Fecha</a>
-  <a href="#venue" class="mobile-link" data-i18n="nav.venue">Lugar</a>
-  <a href="#dresscode" class="mobile-link" data-i18n="nav.dress">Vestimenta</a>
-  <a href="#gifts" class="mobile-link" data-i18n="nav.gifts">Regalos</a>
-  <a href="#lodging" class="mobile-link" data-i18n="mob.lodging">Hospedaje</a>
-  <a href="#closing" class="mobile-link" data-i18n="nav.rsvp">RSVP</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <p class="hero-label" data-i18n="hero.save">Reserva la fecha</p>
-  <p class="hero-monogram"><img src="Muditos.svg" alt="" /></p>
-  <div class="hero-names-row">
-    <span class="hero-name-tag">Bernarda</span>
-    <span class="hero-name-tag">Juanse</span>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#story" class="mobile-link" data-i18n="nav.story">Fecha</a>
+    <a href="#venue" class="mobile-link" data-i18n="nav.venue">Lugar</a>
+    <a href="#dresscode" class="mobile-link" data-i18n="nav.dress">Vestimenta</a>
+    <a href="#gifts" class="mobile-link" data-i18n="nav.gifts">Regalos</a>
+    <a href="#lodging" class="mobile-link" data-i18n="mob.lodging">Hospedaje</a>
+    <a href="#closing" class="mobile-link" data-i18n="nav.rsvp">RSVP</a>
   </div>
 
-</section>
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-label" data-i18n="hero.save">Reserva la fecha</p>
+    <p class="hero-monogram"><img src="Muditos.svg" alt="" /></p>
+    <div class="hero-names-row">
+      <span class="hero-name-tag">Bernarda</span>
+      <span class="hero-name-tag">Juanse</span>
+    </div>
 
-<!-- STORY -->
-<section id="story" class="fade-up">
-  <div class="story-flora"><img src="Flowers.svg" alt="" /></div>
-  <p class="story-subtitle" data-i18n="story.sub">
-    Hay cosas que no se explican<br>con ecuaciones ni con diseños
-  </p>
-  <h2 class="story-title" data-i18n="story.title">Nuestro amor<br>es una de ellas</h2>
+  </section>
 
-  <div class="story-photo-wrap">
-    <img src="2.2.png" alt="Juanse y Bernarda" style="width:100%; height:auto; display:block;" />
-    <span class="story-rotated-left" data-i18n="story.left">Uniéndonos de nuevo</span>
-    <span class="story-rotated-right" data-i18n="story.right">Ocho años después</span>
-  </div>
-</section>
-
-<!-- INVITATION -->
-<section id="invitation">
-  <div class="fade-up">
-    <p class="inv-body" data-i18n="inv.body">
-      Ustedes ocupan un lugar muy especial en nuestro corazón<br>y por eso les invitamos a celebrar con nosotros<br>el día de nuestro matrimonio el
+  <!-- STORY -->
+  <section id="story" class="fade-up">
+    <div class="story-flora"><img src="Flowers.svg" alt="" /></div>
+    <p class="story-subtitle" data-i18n="story.sub">
+      Hay cosas que no se explican<br>con ecuaciones ni con diseños
     </p>
-    <h2 class="inv-date" data-i18n="inv.date">09 de Enero del 2027</h2>
-    <div class="inv-rsvp-bar">
-      <span class="inv-mountain"><img src="mountain.svg" alt="" /></span>
+    <h2 class="story-title" data-i18n="story.title">Nuestro amor<br>es una de ellas</h2>
+
+    <div class="story-photo-wrap">
+      <img src="2.2.png" alt="Juanse y Bernarda" style="width:100%; height:auto; display:block;" />
+      <span class="story-rotated-left" data-i18n="story.left">Uniéndonos de nuevo</span>
+      <span class="story-rotated-right" data-i18n="story.right">Ocho años después</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- QUITO -->
-<div id="quito-section">
-  <div class="quito-img-wrap">
-    <img src="Quito.png" alt="Quito" />
-    <div class="quito-text-top">
-      <p class="quito-where" data-i18n="quito.where">¿Dónde?</p>
-      <p class="quito-where-sub" data-i18n="quito.sub">Donde empezó todo</p>
-    </div>
-  </div>
-</div>
-
-<!-- VENUE -->
-<section id="venue" class="fade-up">
-  <div class="venue-card">
-    <div class="venue-icon"><img src="el limonar.svg" alt="El Limonar" /></div>
-    <p class="venue-tagline" data-i18n="venue.tagline">Celebraremos nuestro matrimonio<br>en la Quinta el Limonar</p>
-
-    <div class="schedule-stack">
-      <div class="schedule-item">
-        <div class="schedule-time">11:30 AM</div>
-        <div class="schedule-label" data-i18n="venue.ceremony">Ceremonia</div>
-      </div>
-      <img src="timeline diveder 1.svg" class="timeline-divider" alt="" />
-      <div class="schedule-item">
-        <div class="schedule-time">12:30 PM</div>
-        <div class="schedule-label" data-i18n="venue.cocktail">Cocktail</div>
-      </div>
-      <img src="timeline diveder 2.svg" class="timeline-divider" alt="" />
-      <div class="schedule-item">
-        <div class="schedule-time">02:30 PM</div>
-        <div class="schedule-label" data-i18n="venue.reception">Recepción</div>
+  <!-- INVITATION -->
+  <section id="invitation">
+    <div class="fade-up">
+      <p class="inv-body" data-i18n="inv.body">
+        Ustedes ocupan un lugar muy especial en nuestro corazón<br>y por eso les invitamos a celebrar con nosotros<br>el
+        día de nuestro matrimonio el
+      </p>
+      <h2 class="inv-date" data-i18n="inv.date">09 de Enero del 2027</h2>
+      <div class="inv-rsvp-bar">
+        <span class="inv-mountain"><img src="mountain.svg" alt="" /></span>
       </div>
     </div>
+  </section>
 
-    <div class="venue-divider"></div>
-    <p class="venue-address">
-      Cesar Mora Pareja L5-6 pb<br>
-      Puembo 170904, Línea Ferrea<br>
-      San José de Chaltura, Ecuador
-    </p>
-    <a
-      href="https://maps.app.goo.gl/mSwDtBrt8AZcPZUq9"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="venue-map-btn"
-      data-i18n="venue.map"
-    >Ver ubicación</a>
+  <!-- QUITO -->
+  <div id="quito-section">
+    <div class="quito-img-wrap">
+      <img src="Quito.png" alt="Quito" />
+      <div class="quito-text-top">
+        <p class="quito-where" data-i18n="quito.where">¿Dónde?</p>
+        <p class="quito-where-sub" data-i18n="quito.sub">Donde empezó todo</p>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- DRESS CODE -->
-<section id="dresscode">
-  <div class="dresscode-inner">
-    <div class="dresscode-header fade-up">
-      <div class="dresscode-flora"><img src="Flowers.svg" alt="" /></div>
-      <p class="dresscode-label" data-i18n="dress.label">Código de vestimenta formal</p>
-      <h2 class="section-title" style="font-weight:500;" data-i18n="dress.title">Tonos neutros</h2>
+  <!-- VENUE -->
+  <section id="venue" class="fade-up">
+    <div class="venue-card">
+      <div class="venue-icon"><img src="el limonar.svg" alt="El Limonar" /></div>
+      <p class="venue-tagline" data-i18n="venue.tagline">Celebraremos nuestro matrimonio<br>en la Quinta el Limonar</p>
+
+      <div class="schedule-stack">
+        <div class="schedule-item">
+          <div class="schedule-time">11:30 AM</div>
+          <div class="schedule-label" data-i18n="venue.ceremony">Ceremonia</div>
+        </div>
+        <img src="timeline diveder 1.svg" class="timeline-divider" alt="" />
+        <div class="schedule-item">
+          <div class="schedule-time">12:30 PM</div>
+          <div class="schedule-label" data-i18n="venue.cocktail">Cocktail</div>
+        </div>
+        <img src="timeline diveder 2.svg" class="timeline-divider" alt="" />
+        <div class="schedule-item">
+          <div class="schedule-time">02:30 PM</div>
+          <div class="schedule-label" data-i18n="venue.reception">Recepción</div>
+        </div>
+      </div>
+
+      <div class="venue-divider"></div>
+      <p class="venue-address">
+        Cesar Mora Pareja L5-6 pb<br>
+        Puembo 170904, Línea Ferrea<br>
+        San José de Chaltura, Ecuador
+      </p>
+      <a href="https://maps.app.goo.gl/mSwDtBrt8AZcPZUq9" target="_blank" rel="noopener noreferrer"
+        class="venue-map-btn" data-i18n="venue.map">Ver ubicación</a>
     </div>
-    <div class="dresscode-colors fade-up">
-      <span class="dresscode-color-name">Champagne</span>
-      <span class="dresscode-color-name">Beige</span>
-      <span class="dresscode-color-name" data-i18n="dress.sand">Arena</span>
-      <span class="dresscode-color-name" data-i18n="dress.linen">Lino</span>
+  </section>
+
+  <!-- DRESS CODE -->
+  <section id="dresscode">
+    <div class="dresscode-inner">
+      <div class="dresscode-header fade-up">
+        <div class="dresscode-flora"><img src="Flowers.svg" alt="" /></div>
+        <p class="dresscode-label" data-i18n="dress.label">Código de vestimenta formal</p>
+        <h2 class="section-title" style="font-weight:500;" data-i18n="dress.title">Tonos neutros</h2>
+      </div>
+      <div class="dresscode-colors fade-up">
+        <span class="dresscode-color-name">Champagne</span>
+        <span class="dresscode-color-name">Beige</span>
+        <span class="dresscode-color-name" data-i18n="dress.sand">Arena</span>
+        <span class="dresscode-color-name" data-i18n="dress.linen">Lino</span>
+      </div>
+
+      <div class="dresscode-body">
+        <img src="3.7.png" alt="Código de vestimenta" class="dresscode-img" />
+
+        <div class="dresscode-text fade-up">
+          <p class="dresscode-note" data-i18n="dress.note">
+            Sabemos que es inusual, pero para nuestra boda el vestuario de los invitados será en colores neutros.
+          </p>
+          <div class="attire-block">
+            <img src="dress.svg" class="attire-icon-large" alt="" />
+            <p class="attire-text" data-i18n="dress.attire">Vestido corto o cóctel<br>Traje y corbata</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="dresscode-body">
-      <img src="3.7.png" alt="Código de vestimenta" class="dresscode-img" />
+  <!-- GIFTS -->
+  <section id="gifts">
+    <div class="gifts-inner fade-up">
+      <div class="gifts-icon"><img src="llama.svg" alt="" /></div>
+      <p class="gifts-body"
+        style="margin-top:1.875rem; margin-bottom:0.5rem; opacity:0.6; font-size:clamp(0.95rem,2.5vw,1.2rem); letter-spacing:0; line-height:1.3;"
+        data-i18n="gifts.eyebrow">Sugerencias</p>
+      <h2 class="section-title" style="text-align:center; font-weight:500;" data-i18n="gifts.title">Regalos</h2>
+      <p class="gifts-body" data-i18n="gifts.body">
+        Les agradecemos sus obsequios que nos permitirán<br>seguir cumpliendo nuestros sueños y construir un hogar.
+      </p>
+      <div class="gifts-tabs">
+        <button class="gifts-tab active" onclick="switchGift(this,'gift-ecuador')">Ecuador</button>
+        <button class="gifts-tab" onclick="switchGift(this,'gift-canada')">Canadá</button>
+        <button class="gifts-tab" onclick="switchGift(this,'gift-netherlands')">Netherlands</button>
+      </div>
+      <div class="gifts-panels-container">
+        <div class="gifts-panel active" id="gift-ecuador">
+          <span class="gifts-panel-label">Banco Pacífico</span>
+          <p>Juan Sebastian Burbano Gallegos</p>
+          <p data-i18n="gifts.account">Cuenta de ahorros No. 1048778311</p>
+          <p>C.I 1723605365</p>
+          <button class="gifts-copy-btn" onclick="copyGift(this, '1048778311')" data-i18n="gifts.copy.account">Copiar
+            número de cuenta</button>
+        </div>
+        <div class="gifts-panel" id="gift-canada">
+          <span class="gifts-panel-label">E-Transfer</span>
+          <p>bernardaavila3@gmail.com</p>
+          <button class="gifts-copy-btn" onclick="copyGift(this, 'bernardaavila3@gmail.com')"
+            data-i18n="gifts.copy.details">Copiar datos</button>
+        </div>
+        <div class="gifts-panel" id="gift-netherlands">
+          <span class="gifts-panel-label">Banco ING</span>
+          <p>JS Burbano Gallegos</p>
+          <p>IBAN. NL47INGB0108570983</p>
+          <p>BIC. INGBNL2A</p>
+          <button class="gifts-copy-btn" onclick="copyGift(this, 'NL47INGB0108570983')"
+            data-i18n="gifts.copy.iban">Copiar IBAN</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="dresscode-text fade-up">
-        <p class="dresscode-note" data-i18n="dress.note">
-          Sabemos que es inusual, pero para nuestra boda el vestuario de los invitados será en colores neutros.
+  <!-- LODGING -->
+  <section id="lodging">
+    <img src="m.svg" class="lodging-watermark" alt="" />
+    <div class="lodging-inner fade-up">
+      <h2 class="section-title" style="font-weight:500; text-align:center;" data-i18n="lodge.title">Hospedaje</h2>
+      <p class="lodging-body" style="text-align:center; margin-left:auto; margin-right:auto;" data-i18n="lodge.body">
+        Para los que desean hospedarse cerca de la Quinta, les compartimos algunas opciones:
+      </p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:6.25rem;">
+        <a href="https://booking.com/mywishlist.html?wl=38b9eed791354e4d8b39abc90cfb677a" target="_blank" rel="noopener"
+          class="gifts-copy-btn" style="text-decoration:none;" data-i18n="lodge.hotels">Hoteles Favoritos</a>
+        <a href="https://www.airbnb.ca/wishlists/invite/32794a33-cd4c-4a02-b444-c43e375dc8e8?s=67&unique_share_id=b0edd6d2-c9b1-4ceb-81b5-98f59b427cc3"
+          target="_blank" rel="noopener" class="gifts-copy-btn" style="text-decoration:none;"
+          data-i18n="lodge.airbnb">Airbnb Favoritos</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CLOSING -->
+  <section id="closing">
+
+    <!-- RSVP block -->
+    <div class="rsvp-card fade-up">
+      <div class="closing-rsvp">
+        <span class="section-eyebrow" data-i18n="rsvp.eyebrow">Confirma tu asistencia</span>
+        <h2 class="section-title" style="font-weight:500;">RSVP</h2>
+        <div id="countdown">
+          <div class="countdown-grid">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-days">000</span>
+              <span class="countdown-unit-label" data-i18n="rsvp.days">Días</span>
+            </div>
+            <span class="countdown-sep">·</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-hours">00</span>
+              <span class="countdown-unit-label" data-i18n="rsvp.hours">Horas</span>
+            </div>
+            <span class="countdown-sep">·</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-mins">00</span>
+              <span class="countdown-unit-label" data-i18n="rsvp.mins">Minutos</span>
+            </div>
+            <span class="countdown-sep">·</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-secs">00</span>
+              <span class="countdown-unit-label" data-i18n="rsvp.secs">Segundos</span>
+            </div>
+          </div>
+        </div>
+        <p class="closing-rsvp-deadline" data-i18n="rsvp.deadline">Por favor confirma antes del 20 de septiembre de 2026
         </p>
-        <div class="attire-block">
-          <img src="dress.svg" class="attire-icon-large" alt="" />
-          <p class="attire-text" data-i18n="dress.attire">Vestido corto o cóctel<br>Traje y corbata</p>
+
+        <div class="typeform-wrap">
+          <iframe id="tf-es" src="https://form.typeform.com/to/sWTePkNV" frameborder="0"
+            allow="camera; microphone; autoplay; encrypted-media;" allowfullscreen></iframe>
+          <iframe id="tf-en" src="https://form.typeform.com/to/mGwLLPZF" frameborder="0"
+            allow="camera; microphone; autoplay; encrypted-media;" allowfullscreen style="display:none;"></iframe>
         </div>
       </div>
+    </div><!-- /.rsvp-card -->
+
+    <img src="names.svg" class="closing-names-svg" alt="Juanse &amp; Bernarda" />
+
+    <div class="closing-photo-wrap">
+      <img src="4.6.png" alt="Juanse y Bernarda" />
+      <span class="closing-rotated-left" data-i18n="closing.left">Por el inicio de</span>
+      <span class="closing-rotated-right" data-i18n="closing.right">Nuestra nueva aventura</span>
     </div>
-  </div>
-</section>
 
-<!-- GIFTS -->
-<section id="gifts">
-  <div class="gifts-inner fade-up">
-    <div class="gifts-icon"><img src="llama.svg" alt="" /></div>
-    <p class="gifts-body" style="margin-top:1.875rem; margin-bottom:0.5rem; opacity:0.6; font-size:clamp(0.95rem,2.5vw,1.2rem); letter-spacing:0; line-height:1.3;" data-i18n="gifts.eyebrow">Sugerencias</p>
-    <h2 class="section-title" style="text-align:center; font-weight:500;" data-i18n="gifts.title">Regalos</h2>
-    <p class="gifts-body" data-i18n="gifts.body">
-      Les agradecemos sus obsequios que nos permitirán<br>seguir cumpliendo nuestros sueños y construir un hogar.
-    </p>
-    <div class="gifts-tabs">
-      <button class="gifts-tab active" onclick="switchGift(this,'gift-ecuador')">Ecuador</button>
-      <button class="gifts-tab" onclick="switchGift(this,'gift-canada')">Canadá</button>
-      <button class="gifts-tab" onclick="switchGift(this,'gift-netherlands')">Netherlands</button>
+    <div class="closing-tagline-row">
+      <span class="closing-tag" data-i18n="closing.t1">Acompáñanos</span>
+      <span class="closing-tag" data-i18n="closing.t2">en</span>
+      <span class="closing-tag" data-i18n="closing.t3">este</span>
+      <span class="closing-tag" data-i18n="closing.t4">hermoso</span>
+      <span class="closing-tag" data-i18n="closing.t5">día</span>
     </div>
-    <div class="gifts-panels-container">
-      <div class="gifts-panel active" id="gift-ecuador">
-        <span class="gifts-panel-label">Banco Pacífico</span>
-        <p>Juan Sebastian Burbano Gallegos</p>
-        <p data-i18n="gifts.account">Cuenta de ahorros No. 1048778311</p>
-        <p>C.I 1723605365</p>
-        <button class="gifts-copy-btn" onclick="copyGift(this, '1048778311')" data-i18n="gifts.copy.account">Copiar número de cuenta</button>
-      </div>
-      <div class="gifts-panel" id="gift-canada">
-        <span class="gifts-panel-label">E-Transfer</span>
-        <p>bernardaavila3@gmail.com</p>
-        <button class="gifts-copy-btn" onclick="copyGift(this, 'bernardaavila3@gmail.com')" data-i18n="gifts.copy.details">Copiar datos</button>
-      </div>
-      <div class="gifts-panel" id="gift-netherlands">
-        <span class="gifts-panel-label">Banco ING</span>
-        <p>JS Burbano Gallegos</p>
-        <p>IBAN. NL47INGB0108570983</p>
-        <p>BIC. INGBNL2A</p>
-        <button class="gifts-copy-btn" onclick="copyGift(this, 'NL47INGB0108570983')" data-i18n="gifts.copy.iban">Copiar IBAN</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LODGING -->
-<section id="lodging">
-  <img src="m.svg" class="lodging-watermark" alt="" />
-  <div class="lodging-inner fade-up">
-    <h2 class="section-title" style="font-weight:500; text-align:center;" data-i18n="lodge.title">Hospedaje</h2>
-    <p class="lodging-body" style="text-align:center; margin-left:auto; margin-right:auto;" data-i18n="lodge.body">
-      Para los que desean hospedarse cerca de la Quinta, les compartimos algunas opciones:
-    </p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:6.25rem;">
-      <a href="https://booking.com/mywishlist.html?wl=38b9eed791354e4d8b39abc90cfb677a" target="_blank" rel="noopener" class="gifts-copy-btn" style="text-decoration:none;" data-i18n="lodge.hotels">Hoteles Favoritos</a>
-      <a href="https://www.airbnb.ca/wishlists/invite/32794a33-cd4c-4a02-b444-c43e375dc8e8?s=67&unique_share_id=b0edd6d2-c9b1-4ceb-81b5-98f59b427cc3" target="_blank" rel="noopener" class="gifts-copy-btn" style="text-decoration:none;" data-i18n="lodge.airbnb">Airbnb Favoritos</a>
-    </div>
-  </div>
-</section>
+    <span class="closing-date">9.1.27</span>
+  </section>
 
 
-<!-- CLOSING -->
-<section id="closing">
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-  <!-- RSVP block -->
-  <div class="rsvp-card fade-up">
-  <div class="closing-rsvp">
-    <span class="section-eyebrow" data-i18n="rsvp.eyebrow">Confirma tu asistencia</span>
-    <h2 class="section-title" style="font-weight:500;">RSVP</h2>
-    <div id="countdown">
-      <div class="countdown-grid">
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-days">000</span>
-          <span class="countdown-unit-label" data-i18n="rsvp.days">Días</span>
-        </div>
-        <span class="countdown-sep">·</span>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-hours">00</span>
-          <span class="countdown-unit-label" data-i18n="rsvp.hours">Horas</span>
-        </div>
-        <span class="countdown-sep">·</span>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-mins">00</span>
-          <span class="countdown-unit-label" data-i18n="rsvp.mins">Minutos</span>
-        </div>
-        <span class="countdown-sep">·</span>
-        <div class="countdown-unit">
-          <span class="countdown-number" id="cd-secs">00</span>
-          <span class="countdown-unit-label" data-i18n="rsvp.secs">Segundos</span>
-        </div>
-      </div>
-    </div>
-    <p class="closing-rsvp-deadline" data-i18n="rsvp.deadline">Por favor confirma antes del 20 de septiembre de 2026</p>
+    function openMenu() { mobileMenu.classList.add('open'); toggle.classList.add('open'); }
+    function closeMenu() { mobileMenu.classList.remove('open'); toggle.classList.remove('open'); }
 
-    <div class="typeform-wrap">
-      <iframe
-        id="tf-es"
-        src="https://form.typeform.com/to/01KPRNBKFKV3TYCERZ9T7RKWQR"
-        frameborder="0"
-        allow="camera; microphone; autoplay; encrypted-media;"
-        allowfullscreen
-      ></iframe>
-      <iframe
-        id="tf-en"
-        src="https://form.typeform.com/to/01KPRM0KSG14AACKJH6DWJGM1C"
-        frameborder="0"
-        allow="camera; microphone; autoplay; encrypted-media;"
-        allowfullscreen
-        style="display:none;"
-      ></iframe>
-    </div>
-  </div>
-  </div><!-- /.rsvp-card -->
+    toggle.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMenu));
 
-  <img src="names.svg" class="closing-names-svg" alt="Juanse &amp; Bernarda" />
-
-  <div class="closing-photo-wrap">
-    <img src="4.6.png" alt="Juanse y Bernarda" />
-    <span class="closing-rotated-left" data-i18n="closing.left">Por el inicio de</span>
-    <span class="closing-rotated-right" data-i18n="closing.right">Nuestra nueva aventura</span>
-  </div>
-
-  <div class="closing-tagline-row">
-    <span class="closing-tag" data-i18n="closing.t1">Acompáñanos</span>
-    <span class="closing-tag" data-i18n="closing.t2">en</span>
-    <span class="closing-tag" data-i18n="closing.t3">este</span>
-    <span class="closing-tag" data-i18n="closing.t4">hermoso</span>
-    <span class="closing-tag" data-i18n="closing.t5">día</span>
-  </div>
-  <span class="closing-date">9.1.27</span>
-</section>
-
-
-<script>
-  // Mobile menu
-  const toggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  function openMenu() { mobileMenu.classList.add('open'); toggle.classList.add('open'); }
-  function closeMenu() { mobileMenu.classList.remove('open'); toggle.classList.remove('open'); }
-
-  toggle.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
-  document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMenu));
-
-  // Countdown
-  function updateCountdown() {
-    const target = new Date('2027-01-06T11:30:00-05:00');
-    const now = new Date();
-    const diff = target - now;
-    if (diff <= 0) {
-      document.getElementById('cd-days').textContent = '00';
-      document.getElementById('cd-hours').textContent = '00';
-      document.getElementById('cd-mins').textContent = '00';
-      document.getElementById('cd-secs').textContent = '00';
-      return;
+    // Countdown
+    function updateCountdown() {
+      const target = new Date('2027-01-06T11:30:00-05:00');
+      const now = new Date();
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
+        return;
+      }
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const mins = Math.floor((diff % 3600000) / 60000);
+      const secs = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = String(days).padStart(3, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
     }
-    const days = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins = Math.floor((diff % 3600000) / 60000);
-    const secs = Math.floor((diff % 60000) / 1000);
-    document.getElementById('cd-days').textContent = String(days).padStart(3, '0');
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
-    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 
-  // Fade-up on scroll
-  const fadeEls = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
-  fadeEls.forEach(el => observer.observe(el));
+    // Fade-up on scroll
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(el => observer.observe(el));
 
-  // ── LANGUAGE TOGGLE ────────────────────────────────
-  const i18n = {
-    es: {
-      'nav.story': 'Fecha', 'nav.venue': 'Lugar', 'nav.dress': 'Vestimenta',
-      'nav.gifts': 'Regalos', 'nav.rsvp': 'RSVP',
-      'mob.home': 'Inicio', 'mob.invite': 'Invitación', 'mob.lodging': 'Hospedaje',
-      'hero.save': 'Reserva la fecha',
-      'story.sub': 'Hay cosas que no se explican<br>con ecuaciones ni con diseños',
-      'story.title': 'Nuestro amor<br>es una de ellas',
-      'story.left': 'Uniéndonos de nuevo', 'story.right': 'Ocho años después',
-      'inv.body': 'Ustedes ocupan un lugar muy especial en nuestro corazón<br>y por eso les invitamos a celebrar con nosotros<br>el día de nuestro matrimonio el',
-      'inv.date': '09 de Enero del 2027',
-      'quito.where': '¿Dónde?', 'quito.sub': 'Donde empezó todo',
-      'venue.tagline': 'Celebraremos nuestro matrimonio<br>en la Quinta el Limonar',
-      'venue.ceremony': 'Ceremonia', 'venue.cocktail': 'Cocktail', 'venue.reception': 'Recepción',
-      'venue.map': 'Ver ubicación',
-      'dress.label': 'Código de vestimenta formal', 'dress.title': 'Tonos neutros',
-      'dress.sand': 'Arena', 'dress.linen': 'Lino',
-      'dress.note': 'Sabemos que es inusual, pero para nuestra boda el vestuario de los invitados será en colores neutros.',
-      'dress.attire': 'Vestido corto o cóctel<br>Traje y corbata',
-      'gifts.eyebrow': 'Sugerencias', 'gifts.title': 'Regalos',
-      'gifts.body': 'Les agradecemos sus obsequios que nos permitirán<br>seguir cumpliendo nuestros sueños y construir un hogar.',
-      'gifts.account': 'Cuenta de ahorros No. 1048778311',
-      'gifts.copy.account': 'Copiar número de cuenta', 'gifts.copy.details': 'Copiar datos', 'gifts.copy.iban': 'Copiar IBAN',
-      'lodge.title': 'Hospedaje',
-      'lodge.body': 'Para los que desean hospedarse cerca de la Quinta, les compartimos algunas opciones:',
-      'lodge.hotels': 'Hoteles Favoritos', 'lodge.airbnb': 'Airbnb Favoritos',
-      'rsvp.eyebrow': 'Confirma tu asistencia',
-      'rsvp.days': 'Días', 'rsvp.hours': 'Horas', 'rsvp.mins': 'Minutos', 'rsvp.secs': 'Segundos',
-      'rsvp.deadline': 'Por favor confirma antes del 20 de septiembre de 2026',
-      'rsvp.btn': 'Confirmar asistencia',
-      'closing.left': 'Por el inicio de', 'closing.right': 'Nuestra nueva aventura',
-      'closing.t1': 'Acompáñanos', 'closing.t2': 'en', 'closing.t3': 'este', 'closing.t4': 'hermoso', 'closing.t5': 'día'
-    },
-    en: {
-      'nav.story': 'Date', 'nav.venue': 'Venue', 'nav.dress': 'Dress Code',
-      'nav.gifts': 'Gifts', 'nav.rsvp': 'RSVP',
-      'mob.home': 'Home', 'mob.invite': 'Invitation', 'mob.lodging': 'Lodging',
-      'hero.save': 'Save the Date',
-      'story.sub': 'Some things can\'t be explained<br>with equations or designs',
-      'story.title': 'Our love<br>is one of them',
-      'story.left': 'Coming back together', 'story.right': 'Eight years later',
-      'inv.body': 'You hold a very special place in our hearts<br>and that is why we invite you to celebrate with us<br>the day of our wedding on',
-      'inv.date': 'January 09, 2027',
-      'quito.where': 'Where?', 'quito.sub': 'Where it all began',
-      'venue.tagline': 'We will celebrate our wedding<br>at Quinta el Limonar',
-      'venue.ceremony': 'Ceremony', 'venue.cocktail': 'Cocktail', 'venue.reception': 'Reception',
-      'venue.map': 'View location',
-      'dress.label': 'Formal dress code', 'dress.title': 'Neutral tones',
-      'dress.sand': 'Sand', 'dress.linen': 'Linen',
-      'dress.note': 'We know it\'s unusual, but for our wedding guests\' attire will be in neutral colors.',
-      'dress.attire': 'Short or cocktail dress<br>Suit and tie',
-      'gifts.eyebrow': 'Suggestions', 'gifts.title': 'Gifts',
-      'gifts.body': 'We are grateful for your gifts which will allow us<br>to keep fulfilling our dreams and build a home.',
-      'gifts.account': 'Savings account No. 1048778311',
-      'gifts.copy.account': 'Copy account number', 'gifts.copy.details': 'Copy details', 'gifts.copy.iban': 'Copy IBAN',
-      'lodge.title': 'Lodging',
-      'lodge.body': 'For those who wish to stay near the Quinta, here are some options:',
-      'lodge.hotels': 'Favorite Hotels', 'lodge.airbnb': 'Favorite Airbnbs',
-      'rsvp.eyebrow': 'Confirm your attendance',
-      'rsvp.days': 'Days', 'rsvp.hours': 'Hours', 'rsvp.mins': 'Minutes', 'rsvp.secs': 'Seconds',
-      'rsvp.deadline': 'Please confirm before September 20, 2026',
-      'rsvp.btn': 'Confirm attendance',
-      'closing.left': 'For the beginning of', 'closing.right': 'Our new adventure',
-      'closing.t1': 'Join us', 'closing.t2': 'on', 'closing.t3': 'this', 'closing.t4': 'beautiful', 'closing.t5': 'day'
+    // ── LANGUAGE TOGGLE ────────────────────────────────
+    const i18n = {
+      es: {
+        'nav.story': 'Fecha', 'nav.venue': 'Lugar', 'nav.dress': 'Vestimenta',
+        'nav.gifts': 'Regalos', 'nav.rsvp': 'RSVP',
+        'mob.home': 'Inicio', 'mob.invite': 'Invitación', 'mob.lodging': 'Hospedaje',
+        'hero.save': 'Reserva la fecha',
+        'story.sub': 'Hay cosas que no se explican<br>con ecuaciones ni con diseños',
+        'story.title': 'Nuestro amor<br>es una de ellas',
+        'story.left': 'Uniéndonos de nuevo', 'story.right': 'Ocho años después',
+        'inv.body': 'Ustedes ocupan un lugar muy especial en nuestro corazón<br>y por eso les invitamos a celebrar con nosotros<br>el día de nuestro matrimonio el',
+        'inv.date': '09 de Enero del 2027',
+        'quito.where': '¿Dónde?', 'quito.sub': 'Donde empezó todo',
+        'venue.tagline': 'Celebraremos nuestro matrimonio<br>en la Quinta el Limonar',
+        'venue.ceremony': 'Ceremonia', 'venue.cocktail': 'Cocktail', 'venue.reception': 'Recepción',
+        'venue.map': 'Ver ubicación',
+        'dress.label': 'Código de vestimenta formal', 'dress.title': 'Tonos neutros',
+        'dress.sand': 'Arena', 'dress.linen': 'Lino',
+        'dress.note': 'Sabemos que es inusual, pero para nuestra boda el vestuario de los invitados será en colores neutros.',
+        'dress.attire': 'Vestido corto o cóctel<br>Traje y corbata',
+        'gifts.eyebrow': 'Sugerencias', 'gifts.title': 'Regalos',
+        'gifts.body': 'Les agradecemos sus obsequios que nos permitirán<br>seguir cumpliendo nuestros sueños y construir un hogar.',
+        'gifts.account': 'Cuenta de ahorros No. 1048778311',
+        'gifts.copy.account': 'Copiar número de cuenta', 'gifts.copy.details': 'Copiar datos', 'gifts.copy.iban': 'Copiar IBAN',
+        'lodge.title': 'Hospedaje',
+        'lodge.body': 'Para los que desean hospedarse cerca de la Quinta, les compartimos algunas opciones:',
+        'lodge.hotels': 'Hoteles Favoritos', 'lodge.airbnb': 'Airbnb Favoritos',
+        'rsvp.eyebrow': 'Confirma tu asistencia',
+        'rsvp.days': 'Días', 'rsvp.hours': 'Horas', 'rsvp.mins': 'Minutos', 'rsvp.secs': 'Segundos',
+        'rsvp.deadline': 'Por favor confirma antes del 20 de septiembre de 2026',
+        'rsvp.btn': 'Confirmar asistencia',
+        'closing.left': 'Por el inicio de', 'closing.right': 'Nuestra nueva aventura',
+        'closing.t1': 'Acompáñanos', 'closing.t2': 'en', 'closing.t3': 'este', 'closing.t4': 'hermoso', 'closing.t5': 'día'
+      },
+      en: {
+        'nav.story': 'Date', 'nav.venue': 'Venue', 'nav.dress': 'Dress Code',
+        'nav.gifts': 'Gifts', 'nav.rsvp': 'RSVP',
+        'mob.home': 'Home', 'mob.invite': 'Invitation', 'mob.lodging': 'Lodging',
+        'hero.save': 'Save the Date',
+        'story.sub': 'Some things can\'t be explained<br>with equations or designs',
+        'story.title': 'Our love<br>is one of them',
+        'story.left': 'Coming back together', 'story.right': 'Eight years later',
+        'inv.body': 'You hold a very special place in our hearts<br>and that is why we invite you to celebrate with us<br>the day of our wedding on',
+        'inv.date': 'January 09, 2027',
+        'quito.where': 'Where?', 'quito.sub': 'Where it all began',
+        'venue.tagline': 'We will celebrate our wedding<br>at Quinta el Limonar',
+        'venue.ceremony': 'Ceremony', 'venue.cocktail': 'Cocktail', 'venue.reception': 'Reception',
+        'venue.map': 'View location',
+        'dress.label': 'Formal dress code', 'dress.title': 'Neutral tones',
+        'dress.sand': 'Sand', 'dress.linen': 'Linen',
+        'dress.note': 'We know it\'s unusual, but for our wedding guests\' attire will be in neutral colors.',
+        'dress.attire': 'Short or cocktail dress<br>Suit and tie',
+        'gifts.eyebrow': 'Suggestions', 'gifts.title': 'Gifts',
+        'gifts.body': 'We are grateful for your gifts which will allow us<br>to keep fulfilling our dreams and build a home.',
+        'gifts.account': 'Savings account No. 1048778311',
+        'gifts.copy.account': 'Copy account number', 'gifts.copy.details': 'Copy details', 'gifts.copy.iban': 'Copy IBAN',
+        'lodge.title': 'Lodging',
+        'lodge.body': 'For those who wish to stay near the Quinta, here are some options:',
+        'lodge.hotels': 'Favorite Hotels', 'lodge.airbnb': 'Favorite Airbnbs',
+        'rsvp.eyebrow': 'Confirm your attendance',
+        'rsvp.days': 'Days', 'rsvp.hours': 'Hours', 'rsvp.mins': 'Minutes', 'rsvp.secs': 'Seconds',
+        'rsvp.deadline': 'Please confirm before September 20, 2026',
+        'rsvp.btn': 'Confirm attendance',
+        'closing.left': 'For the beginning of', 'closing.right': 'Our new adventure',
+        'closing.t1': 'Join us', 'closing.t2': 'on', 'closing.t3': 'this', 'closing.t4': 'beautiful', 'closing.t5': 'day'
+      }
+    };
+
+    let currentLang = 'es';
+
+    function toggleLang() {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (i18n[currentLang][key] !== undefined) el.innerHTML = i18n[currentLang][key];
+      });
+      const btn = document.getElementById('langToggle');
+      btn.innerHTML = currentLang === 'es'
+        ? '<span class="lang-active">ES</span> · <span class="lang-inactive">EN</span>'
+        : '<span class="lang-inactive">ES</span> · <span class="lang-active">EN</span>';
+      document.getElementById('tf-es').style.display = currentLang === 'es' ? 'block' : 'none';
+      document.getElementById('tf-en').style.display = currentLang === 'en' ? 'block' : 'none';
     }
-  };
 
-  let currentLang = 'es';
+    function switchGift(tab, panelId) {
+      document.querySelectorAll('.gifts-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.gifts-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
 
-  function toggleLang() {
-    currentLang = currentLang === 'es' ? 'en' : 'es';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-      if (i18n[currentLang][key] !== undefined) el.innerHTML = i18n[currentLang][key];
-    });
-    const btn = document.getElementById('langToggle');
-    btn.innerHTML = currentLang === 'es'
-      ? '<span class="lang-active">ES</span> · <span class="lang-inactive">EN</span>'
-      : '<span class="lang-inactive">ES</span> · <span class="lang-active">EN</span>';
-    document.getElementById('tf-es').style.display = currentLang === 'es' ? 'block' : 'none';
-    document.getElementById('tf-en').style.display = currentLang === 'en' ? 'block' : 'none';
-  }
+    function copyGift(btn, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add('copied');
+        const orig = btn.textContent;
+        btn.textContent = '✓ ¡Copiado!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.textContent = orig;
+        }, 2500);
+      });
+    }
 
-  function switchGift(tab, panelId) {
-    document.querySelectorAll('.gifts-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.gifts-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(panelId).classList.add('active');
-  }
-
-  function copyGift(btn, text) {
-    navigator.clipboard.writeText(text).then(() => {
-      btn.classList.add('copied');
-      const orig = btn.textContent;
-      btn.textContent = '✓ ¡Copiado!';
-      setTimeout(() => {
-        btn.classList.remove('copied');
-        btn.textContent = orig;
-      }, 2500);
-    });
-  }
-
-  // RSVP form
-  function submitRsvp(e) {
-    e.preventDefault();
-    document.getElementById('rsvpForm').style.display = 'none';
-    document.getElementById('rsvpSuccess').classList.add('show');
-  }
-</script>
+    // RSVP form
+    function submitRsvp(e) {
+      e.preventDefault();
+      document.getElementById('rsvpForm').style.display = 'none';
+      document.getElementById('rsvpSuccess').classList.add('show');
+    }
+  </script>
 </body>
+
 </html>
