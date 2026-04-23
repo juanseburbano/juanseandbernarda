@@ -595,6 +595,7 @@
       line-height: 1.75;
       max-width: 28ch;
     }
+    .dress-highlight { font-weight: 600; font-style: italic; }
     .attire-block {
       display: flex;
       flex-direction: column;
@@ -962,6 +963,13 @@
       opacity: 0.65;
       white-space: nowrap;
     }
+    .closing-date-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: fit-content;
+      max-width: 100%;
+    }
     .closing-tagline-row {
       display: flex;
       justify-content: space-between;
@@ -1249,7 +1257,7 @@
 
       <div class="dresscode-text fade-up">
         <p class="dresscode-note" data-i18n="dress.note">
-          Sabemos que es inusual, pero para nuestra boda el vestuario de los invitados será en colores neutros.
+          Sabemos que es inusual pero en nuestro matrimonio nuestros atuendos rendirán homenaje a los tejidos tradicionales del Ecuador. Por este motivo el vestuario de los invitados será en <span class="dress-highlight">colores neutros</span>.
         </p>
         <div class="attire-block">
           <img src="dress.svg" class="attire-icon-large" alt="" />
@@ -1272,7 +1280,7 @@
     <div class="gifts-tabs">
       <button class="gifts-tab active" onclick="switchGift(this,'gift-ecuador')">Ecuador</button>
       <button class="gifts-tab" onclick="switchGift(this,'gift-canada')">Canadá</button>
-      <button class="gifts-tab" onclick="switchGift(this,'gift-netherlands')">Netherlands</button>
+      <button class="gifts-tab" onclick="switchGift(this,'gift-netherlands')">Europa</button>
     </div>
     <div class="gifts-panels-container">
       <div class="gifts-panel active" id="gift-ecuador">
@@ -1300,7 +1308,7 @@
 
 <!-- LODGING -->
 <section id="lodging">
-  <img src="m.svg" class="lodging-watermark" alt="" />
+  <img src="Mudos texture.svg" class="lodging-watermark" alt="" />
   <div class="lodging-inner fade-up">
     <h2 class="section-title" style="font-weight:500; text-align:center;" data-i18n="lodge.title">Hospedaje</h2>
     <p class="lodging-body" style="text-align:center; margin-left:auto; margin-right:auto;" data-i18n="lodge.body">
@@ -1375,14 +1383,16 @@
     <span class="closing-rotated-right" data-i18n="closing.right">Nuestra nueva aventura</span>
   </div>
 
-  <div class="closing-tagline-row">
-    <span class="closing-tag" data-i18n="closing.t1">Acompáñanos</span>
-    <span class="closing-tag" data-i18n="closing.t2">en</span>
-    <span class="closing-tag" data-i18n="closing.t3">este</span>
-    <span class="closing-tag" data-i18n="closing.t4">hermoso</span>
-    <span class="closing-tag" data-i18n="closing.t5">día</span>
+  <div class="closing-date-stack">
+    <div class="closing-tagline-row">
+      <span class="closing-tag" data-i18n="closing.t1">Acompáñanos</span>
+      <span class="closing-tag" data-i18n="closing.t2">en</span>
+      <span class="closing-tag" data-i18n="closing.t3">este</span>
+      <span class="closing-tag" data-i18n="closing.t4">hermoso</span>
+      <span class="closing-tag" data-i18n="closing.t5">día</span>
+    </div>
+    <span class="closing-date">9.1.27</span>
   </div>
-  <span class="closing-date">9.1.27</span>
 </section>
 
 
@@ -1446,7 +1456,7 @@
       'venue.map': 'Ver ubicación',
       'dress.label': 'Código de vestimenta formal', 'dress.title': 'Tonos neutros',
       'dress.sand': 'Arena', 'dress.linen': 'Lino',
-      'dress.note': 'Sabemos que es inusual, pero para nuestra boda el vestuario de los invitados será en colores neutros.',
+      'dress.note': 'Sabemos que es inusual pero en nuestro matrimonio nuestros atuendos rendirán homenaje a los tejidos tradicionales del Ecuador. Por este motivo el vestuario de los invitados será en <span class="dress-highlight">colores neutros</span>.',
       'dress.attire': 'Vestido corto o cóctel<br>Traje y corbata',
       'gifts.eyebrow': 'Sugerencias', 'gifts.title': 'Regalos',
       'gifts.body': 'Les agradecemos sus obsequios que nos permitirán<br>seguir cumpliendo nuestros sueños y construir un hogar.',
@@ -1478,7 +1488,7 @@
       'venue.map': 'View location',
       'dress.label': 'Formal dress code', 'dress.title': 'Neutral tones',
       'dress.sand': 'Sand', 'dress.linen': 'Linen',
-      'dress.note': 'We know it\'s unusual, but for our wedding guests\' attire will be in neutral colors.',
+      'dress.note': 'We know it\'s unusual, but for our wedding our attire will pay homage to the traditional textiles of Ecuador. For this reason, guests\' attire will be in <span class="dress-highlight">neutral colors</span>.',
       'dress.attire': 'Short or cocktail dress<br>Suit and tie',
       'gifts.eyebrow': 'Suggestions', 'gifts.title': 'Gifts',
       'gifts.body': 'We are grateful for your gifts which will allow us<br>to keep fulfilling our dreams and build a home.',
