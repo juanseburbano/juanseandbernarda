@@ -151,13 +151,50 @@
     #hero {
       height: 100dvh;
       width: 100%;
-      background: url('hero.webp') center / cover no-repeat;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
       overflow: hidden;
+    }
+    @keyframes heroSlideDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroSlideDownCentered {
+      from { opacity: 0; transform: translateX(-50%) translateY(-16px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    @keyframes heroSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: url('hero.webp') center / cover no-repeat;
+    }
+    .hero-pixel-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+    nav {
+      animation: heroSlideDown 1.4s cubic-bezier(1, 0, 0.42, 0.99) both;
+      animation-play-state: paused;
+    }
+    .hero-monogram, .hero-label {
+      z-index: 2;
+      animation: heroSlideDownCentered 1.4s cubic-bezier(1, 0, 0.42, 0.99) both;
+      animation-play-state: paused;
+    }
+    .hero-names-row {
+      z-index: 2;
+      animation: heroSlideUp 1.4s cubic-bezier(1, 0, 0.42, 0.99) both;
+      animation-play-state: paused;
     }
     .hero-monogram {
       position: absolute;
@@ -579,8 +616,13 @@
       gap: 4rem;
       align-items: stretch;
     }
-    .dresscode-img {
+    .dresscode-img-wrap {
+      position: relative;
       width: 82%;
+      display: block;
+    }
+    .dresscode-img {
+      width: 100%;
       height: auto;
       display: block;
       border-radius: 2px;
@@ -1076,7 +1118,7 @@
         justify-items: center;
         text-align: center;
       }
-      .dresscode-img {
+      .dresscode-img-wrap {
         margin: 3.125rem auto 0;
         width: 70%;
       }
@@ -1151,6 +1193,8 @@
 
 <!-- HERO -->
 <section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pixel-overlay"></div>
   <p class="hero-label" data-i18n="hero.save">Reserva la fecha</p>
   <p class="hero-monogram"><img src="Muditos.svg" alt="" /></p>
   <div class="hero-names-row">
@@ -1254,7 +1298,9 @@
     </div>
 
     <div class="dresscode-body">
-      <img src="3.7.png" alt="Código de vestimenta" class="dresscode-img" />
+      <div class="dresscode-img-wrap">
+        <img src="3.7.webp" alt="Código de vestimenta" class="dresscode-img" />
+      </div>
 
       <div class="dresscode-text fade-up">
         <p class="dresscode-note" data-i18n="dress.note">
@@ -1548,6 +1594,187 @@
     document.getElementById('rsvpForm').style.display = 'none';
     document.getElementById('rsvpSuccess').classList.add('show');
   }
+
+  // Hero pixel dissolution intro
+  (function() {
+    var DURATION = 700;
+    var CELL_PX = 80;
+
+    var overlay = document.querySelector('.hero-pixel-overlay');
+    if (!overlay) return;
+
+    var canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;';
+    overlay.parentElement.insertBefore(canvas, overlay.nextSibling);
+    overlay.remove();
+    var ctx = canvas.getContext('2d');
+
+    var img = new Image();
+    img.src = 'heropixel.webp';
+    img.onload = function() {
+      var nw = img.naturalWidth, nh = img.naturalHeight;
+      var startTime = null, removedCount = 0;
+      var cols, rows, total, order, scale, offX, offY;
+
+      function setup(w, h) {
+        canvas.width = w; canvas.height = h;
+        scale = Math.max(w / nw, h / nh);
+        offX = (w - nw * scale) / 2;
+        offY = (h - nh * scale) / 2;
+        cols = Math.ceil(w / CELL_PX);
+        rows = Math.ceil(h / CELL_PX);
+        total = cols * rows;
+        order = [];
+        for (var i = 0; i < total; i++) order.push(i);
+        for (var i = total - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+        }
+        for (var i = 0; i < total; i++) {
+          var col = i % cols, row = Math.floor(i / cols);
+          var bx = col * CELL_PX, by = row * CELL_PX;
+          var sx = Math.max(0, Math.min(nw - CELL_PX / scale, (bx - offX) / scale));
+          var sy = Math.max(0, Math.min(nh - CELL_PX / scale, (by - offY) / scale));
+          ctx.drawImage(img, sx, sy, CELL_PX / scale, CELL_PX / scale, bx, by, CELL_PX, CELL_PX);
+        }
+      }
+
+      function frame(now) {
+        var w = canvas.offsetWidth, h = canvas.offsetHeight;
+        if (!w || !h) { requestAnimationFrame(frame); return; }
+        if (!startTime) { setup(w, h); startTime = now; }
+
+        var t = Math.min((now - startTime) / DURATION, 1);
+        var target = Math.round(t * total);
+        while (removedCount < target) {
+          var idx = order[removedCount];
+          ctx.clearRect((idx % cols) * CELL_PX, Math.floor(idx / cols) * CELL_PX, CELL_PX, CELL_PX);
+          removedCount++;
+        }
+
+        if (t < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          canvas.remove();
+          ['nav', '.hero-label', '.hero-monogram', '.hero-names-row'].forEach(function(sel) {
+            var el = document.querySelector(sel);
+            if (el) el.style.animationPlayState = 'running';
+          });
+        }
+      }
+      requestAnimationFrame(frame);
+    };
+  })();
+
+  // Pixel distortion effect
+  (function() {
+    var CELL_PX = 20;       // pixel size of each grid cell (consistent across all images)
+    var MOUSE_RADIUS = 50;  // px radius of effect around cursor
+    var STRENGTH = 18;      // max pixel displacement
+    var RELAXATION = 0.88;  // higher = slower recovery (0–1)
+
+    function initEffect(img) {
+      var parent = img.parentElement;
+      if (getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+
+      var canvas = document.createElement('canvas');
+      canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border-radius:inherit;';
+      parent.appendChild(canvas);
+      var ctx = canvas.getContext('2d');
+
+      var cols = 0, rows = 0, dispX, dispY;
+      var mx = -9999, my = -9999;
+      var mouseMoved = false, moveTimer;
+      var running = false, raf;
+
+      function ensureGrid(w, h) {
+        var nc = Math.max(1, Math.round(w / CELL_PX));
+        var nr = Math.max(1, Math.round(h / CELL_PX));
+        if (nc !== cols || nr !== rows) {
+          cols = nc; rows = nr;
+          dispX = new Float32Array(cols * rows);
+          dispY = new Float32Array(cols * rows);
+        }
+      }
+
+      function tick() {
+        var w = img.offsetWidth, h = img.offsetHeight;
+        if (!w || !h || !img.naturalWidth || !img.naturalHeight) { raf = requestAnimationFrame(tick); return; }
+        if (canvas.width !== w) canvas.width = w;
+        if (canvas.height !== h) canvas.height = h;
+        ensureGrid(w, h);
+
+        var nw = img.naturalWidth, nh = img.naturalHeight;
+        var scale = Math.min(w / nw, h / nh);
+        var offX = (w - nw * scale) / 2, offY = (h - nh * scale) / 2;
+        var cellW = w / cols, cellH = h / rows;
+
+        ctx.clearRect(0, 0, w, h);
+        var anyNonZero = false;
+
+        for (var i = 0; i < cols; i++) {
+          for (var j = 0; j < rows; j++) {
+            var idx = j * cols + i;
+            var ccx = (i + 0.5) * cellW, ccy = (j + 0.5) * cellH;
+            var dx = ccx - mx, dy = ccy - my;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+
+            var tX = 0, tY = 0;
+            if (mouseMoved && dist < MOUSE_RADIUS) {
+              var f = (1 - dist / MOUSE_RADIUS) * STRENGTH;
+              tX = (dx / (dist || 1)) * f;
+              tY = (dy / (dist || 1)) * f;
+            }
+
+            dispX[idx] = dispX[idx] * RELAXATION + tX * (1 - RELAXATION);
+            dispY[idx] = dispY[idx] * RELAXATION + tY * (1 - RELAXATION);
+
+            var ox = dispX[idx], oy = dispY[idx];
+            if (Math.abs(ox) < 0.3 && Math.abs(oy) < 0.3) continue;
+            anyNonZero = true;
+
+            var bx = i * cellW, by = j * cellH;
+            var sx = ((bx + ox) - offX) / scale;
+            var sy = ((by + oy) - offY) / scale;
+            sx = Math.max(0, Math.min(nw - cellW / scale, sx));
+            sy = Math.max(0, Math.min(nh - cellH / scale, sy));
+            ctx.drawImage(img, sx, sy, cellW / scale, cellH / scale, bx, by, cellW, cellH);
+          }
+        }
+
+        if (anyNonZero || mouseMoved) {
+          raf = requestAnimationFrame(tick);
+        } else {
+          running = false;
+        }
+      }
+
+      function startTick() {
+        if (!running) { running = true; tick(); }
+      }
+
+      parent.addEventListener('mousemove', function(e) {
+        var r = parent.getBoundingClientRect();
+        mx = e.clientX - r.left;
+        my = e.clientY - r.top;
+        mouseMoved = true;
+        clearTimeout(moveTimer);
+        moveTimer = setTimeout(function() { mouseMoved = false; }, 80);
+        startTick();
+      });
+
+      parent.addEventListener('mouseleave', function() {
+        mx = -9999; my = -9999;
+        mouseMoved = false;
+      });
+    }
+
+    document.querySelectorAll('.story-photo-wrap img, .closing-photo-wrap img, .dresscode-img-wrap img').forEach(function(img) {
+      img.style.cursor = 'crosshair';
+      if (img.complete && img.naturalWidth) { initEffect(img); }
+      else { img.addEventListener('load', function() { initEffect(this); }); }
+    });
+  })();
 </script>
 </body>
 </html>
